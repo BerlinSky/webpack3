@@ -1,5 +1,5 @@
+
 async function asyncTimeout(delay = 10) {
-  console.log('OK');
   return await new Promise((resolve) => {
     setTimeout(() => resolve('OK'), delay);
   });
