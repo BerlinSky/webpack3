@@ -1,10 +1,20 @@
-import _ from 'lodash';
+async function asyncTimeout(delay = 10) {
+  console.log('OK');
+  return await new Promise((resolve) => {
+    setTimeout(() => resolve('OK'), delay);
+  });
+}
+
+const asyncResult = () => asyncTimeout().then( x => {
+  console.log(x);
+});
 
 function component () {
-  var element = document.createElement('div');
+  asyncResult();
 
-  /* lodash is required for the next line to work */
-  element.innerHTML = _.join(['Hello','webpack'], ' ');
+  const element = document.createElement('div');
+
+  element.innerHTML = 'Hello, the world!';
 
   return element;
 }
