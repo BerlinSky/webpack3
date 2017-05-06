@@ -12,20 +12,39 @@ var config = {
   },
 
   module: {
-    rules: [{
-    test: /\.js$/,
-    exclude: /node_modules/,
-    use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: ['es2015', 'es2017'],
-          plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties', 'transform-object-rest-spread']
-        }
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [{
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015', 'es2017'],
+              plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties', 'transform-object-rest-spread']
+            }
+          },
+          {
+            loader: 'eslint-loader'
+          }]
       },
       {
-        loader: 'eslint-loader'
+        test: /\.scss$/,
+          use: [{
+            loader: "style-loader" // creates style nodes from JS strings
+          },
+          {
+            // translates CSS into CommonJS
+            loader: "css-loader", options: {
+              sourceMap: true
+            }
+          },
+          {
+            // compiles Sass to CSS
+            loader: "sass-loader", options: {
+              sourceMap: true
+            }
+          }]
       }]
-    }]
   },
 
   devServer: {
