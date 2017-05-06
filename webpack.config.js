@@ -1,6 +1,6 @@
-var path = require('path');
+const path = require('path');
 
-var config = {
+const config = {
   entry: './app/index.js',
 
   devtool: "cheap-module-eval-source-map",
