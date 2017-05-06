@@ -1,4 +1,10 @@
 const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const extractSass = new ExtractTextPlugin({
+    filename: "[name].[contenthash].css",
+    disable: process.env.NODE_ENV === "development"
+});
 
 const config = {
   entry: './app/index.js',
@@ -29,23 +35,35 @@ const config = {
       },
       {
         test: /\.scss$/,
-          use: [{
-            loader: "style-loader" // creates style nodes from JS strings
-          },
-          {
-            // translates CSS into CommonJS
-            loader: "css-loader", options: {
-              sourceMap: true
-            }
-          },
-          {
-            // compiles Sass to CSS
-            loader: "sass-loader", options: {
-              sourceMap: true
-            }
-          }]
+          use: extractSass.extract({
+            use: [
+              {
+                // translates CSS into CommonJS
+                loader: "css-loader", options: {
+                  importLoaders: 1,
+                  sourceMap: true
+                }
+              },
+              {
+                // apply auto-prefixer
+                loader: "postcss-loader",
+              },
+              {
+                // compiles Sass to CSS
+                loader: "sass-loader", options: {
+                  sourceMap: true
+                }
+              }],
+              // use style-loader in development
+              // creates style nodes from JS strings
+            fallback: "style-loader"
+          })
       }]
   },
+
+  plugins: [
+    extractSass
+  ],
 
   devServer: {
     host: 'localhost',
