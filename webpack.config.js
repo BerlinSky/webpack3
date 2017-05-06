@@ -1,6 +1,6 @@
 var path = require('path');
 
-module.exports = {
+var config = {
   entry: './app/index.js',
 
   devtool: "cheap-module-eval-source-map",
@@ -39,3 +39,15 @@ module.exports = {
     }
   }
 };
+
+// Check if build is running in production mode, then change the sourcemap type
+if (process.env.NODE_ENV === "production") {
+  config.devtool = ""; // No sourcemap for production
+
+  // Add more configuration for production here like
+  // SASS & CSS loaders
+  // Offline plugin
+  // Etc,
+}
+
+module.exports = config;

@@ -14,7 +14,7 @@ function component () {
 
   const element = document.createElement('div');
 
-  element.innerHTML = 'Hello, the world!!???!!??';
+  element.innerHTML = 'Hello, the world!!???!!';
 
   return element;
 }

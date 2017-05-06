@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --watch",
-    "build": "webpack --config webpack.config.js --progress --display-error-details --color"
+    "build": "NODE_ENV=production webpack -p --config webpack.config.js --progress --display-error-details --color"
   },
   "author": "",
   "license": "ISC",
