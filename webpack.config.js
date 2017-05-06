@@ -3,26 +3,29 @@ var path = require('path');
 module.exports = {
   entry: './app/index.js',
 
-  devtool: 'inline-source-map',
+  devtool: "cheap-module-eval-source-map",
 
   output: {
-    filename: '[name].js',
-    sourceMapFilename: '[name].map',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    sourceMapFilename: 'bundle.map',
   },
 
   module: {
-    loaders: [
-      {
-        test: /\.jsx$/,
-        exclude: /node_modules/,
-        loader: 'babel',
-        query: {
+    rules: [{
+    test: /\.js$/,
+    exclude: /node_modules/,
+    use: [{
+        loader: 'babel-loader',
+        options: {
           presets: ['es2015', 'es2017'],
-          plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties', 'transform-object-rest-spread'],
-        },
+          plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties', 'transform-object-rest-spread']
+        }
       },
-    ],
+      {
+        loader: 'eslint-loader'
+      }]
+    }]
   },
 
   devServer: {
