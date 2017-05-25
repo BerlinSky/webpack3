@@ -1,3 +1,6 @@
+import './css/main.css';
+import './css/content.css';
+
 import { helpMe } from './helper';
 
 helpMe();
