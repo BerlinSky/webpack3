@@ -2,3 +2,5 @@
 
 ### Use webpack-dev-server for development
 ### Use webpack.config.js
+### Use Babel
+### Preprocess SCSS
