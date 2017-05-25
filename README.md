@@ -1,4 +1,2 @@
-## build
-```
->npm run build --color
-```
+## Webpack 2 - Basic
+

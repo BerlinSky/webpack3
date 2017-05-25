@@ -1,23 +1,8 @@
-import "./main.scss";
+import { helpMe } from './helper';
 
-async function asyncTimeout(delay = 10) {
-  return await new Promise((resolve) => {
-    setTimeout(() => resolve('OK'), delay);
-  });
+helpMe();
+siteSetup();
+
+function siteSetup()  {
+  console.log("Set up ...");
 }
-
-const asyncResult = () => asyncTimeout().then( x => {
-  console.log(x);
-});
-
-function component () {
-  asyncResult();
-
-  const element = document.createElement('div');
-
-  element.innerHTML = 'Hello, the world!!???!!';
-
-  return element;
-}
-
-document.body.appendChild(component());
