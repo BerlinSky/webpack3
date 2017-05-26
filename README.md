@@ -3,6 +3,7 @@
 ### Use webpack-dev-server for development
 ### Use webpack.config.js
 ### Preprocess SCSS 
+### Next up: PostCss with Autoprefixer
 
 ### Steps:
 1. Install the following 
@@ -19,10 +20,11 @@
   ```
   <link rel="stylesheet" href="dist/main.css">
   ```
+5. Update index.js to import main.scss
+  ```
+  import './sass/main.scss';
 
-Update index.js to use arrow function
+  import { helpMe } from './helper';
   ```
-  const siteSetup = () => {
-    console.log("Set up ... in arrow function now")
-  }
-  ```
+6. Create scss files in new "sass" folder
+
