@@ -1,3 +1,3 @@
-export function helpMe() {
-  console.log('Helper is here...');
+export const helpMe = () => {
+  console.log('Helper is here... in arrow function now');
 }
