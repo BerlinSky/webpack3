@@ -3,7 +3,7 @@
 ### Use webpack-dev-server for development
 ### Use webpack.config.js
 ### Preprocess SCSS 
-### Next up: PostCss with Autoprefixer
+### Next up: SCSS with source-map
 
 ### Steps:
 1. Install the following 
