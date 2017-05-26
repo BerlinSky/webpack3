@@ -10,13 +10,17 @@
   npm i node-sass -D
   npm i extract-text-webpack-plugin -D
   ```
-2. Update helper.js to use arrow function
+2. Update webpack.config: multiple places for sass preprocess
+3. Update package.json to rename "build:dev" to "start"
   ```
-  export const helpMe = () => {
-    console.log('Helper is here... in arrow function now');
-  }
+  "start": "webpack-dev-server",
   ```
-4. Update index.js to use arrow function
+4. Update index.html to add back the css link
+  ```
+  <link rel="stylesheet" href="dist/main.css">
+  ```
+
+Update index.js to use arrow function
   ```
   const siteSetup = () => {
     console.log("Set up ... in arrow function now")
