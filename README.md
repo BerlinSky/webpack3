@@ -8,15 +8,19 @@
 ### Steps:
 1. Install the following 
   ```
-  npm i node-sass -D
-  npm i extract-text-webpack-plugin -D
+  npm i postcss-loader -D
   ```
-2. Update webpack.config: multiple places for sass preprocess
-3. Update package.json to rename "build:dev" to "start"
+2. Update webpack.config: multiple places for post-css preprocess
   ```
-  "start": "webpack-dev-server",
+  test: /\.scss$/,
+    use: extractPlugin.extract({
+      use: ['css-loader', 'postcss-loader','sass-loader']
+    })
   ```
-4. Update index.html to add back the css link
+3. Create a postcss.cofig.js on the project root
+
+4. 
+ Update index.html to add back the css link
   ```
   <link rel="stylesheet" href="dist/main.css">
   ```
