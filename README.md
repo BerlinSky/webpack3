@@ -8,37 +8,21 @@
 ### Add JS source-map
 ### Customize port and start webpack-dev-server
 ### Use the third party library, such as jquery
+### Clean up the "dist" folder
 
 ### Next up: add support for images 
 
 ### Steps:
-1. Update webpack.config.js
-  ```
-  const providerPlugin = new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery'
-  })
-  ```
-  ```
-  plugins: [
-    extractPlugin,
-    providerPlugin,
-    uglifyJsPlugin
-  ],
-  ```
-2. Install jquery to the runtime dependencies
+1. Update webpack.config.js to use 'clean-webpack-plugin
+2. Install the clean-up plugin
 ```
-npm i jquery -S
+npm i clean-webpack-plugin -D
 ```
-3. Import jquery in index.js
+3. Update "build" command in package.json
 ```
-import 'jquery';
+"scripts": {
+  "start": "webpack-dev-server",
+  "build": "webpack"
+},
 ```
-4. Reference and use jquery in index.js
-```
-const testjQuery = () => {
-  const thisBody = $('body');
-  thisBody.css({ 'color': '#fff' })
-}
-```
-4. start dev server "npm start" to verify
+4. Create a build "npm run build" to verify

@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const extractPlugin = new ExtractTextPlugin({
   filename: 'main.css'
@@ -10,6 +11,8 @@ const providerPlugin = new webpack.ProvidePlugin({
   $: 'jquery',
   jQuery: 'jquery'
 })
+
+const cleanWebPackPlugin = new CleanWebpackPlugin(['dist'])
 
 const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({ })
 
@@ -74,6 +77,7 @@ module.exports = {
   plugins: [
     extractPlugin,
     providerPlugin,
+    cleanWebPackPlugin,
     uglifyJsPlugin
   ],
   devServer: {
