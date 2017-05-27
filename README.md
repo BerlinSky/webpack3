@@ -7,8 +7,7 @@
 ### Add support for babel preset 2017
 ### Add JS source-map
 ### Customize port and start webpack-dev-server
-### Use the third party library, such as jquery
-### Clean up the "dist" folder
+### Use the third party library, such as jquery and Clean up the "dist" folder
 
 ### Next up: add support for images 
 
