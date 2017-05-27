@@ -10,16 +10,14 @@
 ### Use the third party library, such as jquery and Clean up the "dist" folder
 ### Add support for html templating
 ### Add support for images 
+### Add support for pug 
 
-### Next up: add support for pug 
+### Next up: add support for pug (option #2)
 
 ### Steps:
-1. Update webpack.config.js to use 'html-loader' and "file-loader'
-2. Install the html and file loaders
+1. Update webpack.config.js to use 'html-loader' and "pug-html-loader'
+2. Install the html-pug loaders
 ```
-npm i file-loader -D
-npm i html-loader -D
+npm i pug-html-loader -D
 ```
-3. Create an image folder
-4. Add an image to the "image" folder
-4. Restart the web-dev server to test html with image
+3. Create a pug file
