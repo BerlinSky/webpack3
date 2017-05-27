@@ -3,7 +3,7 @@
 ### Use webpack.config.js
 ### Generate source-map for SCSS 
 ### Compile SCSS without importing it from index.js
-### Next up: ???
+### Next up: babel preset 2017
 
 ### Steps:
 1. Remove the statement "import './sass/main.scss';" from index.js
