@@ -6,24 +6,39 @@
 ### Add support for eslint
 ### Add support for babel preset 2017
 ### Add JS source-map
-### Next up: customize port and start webpack-dev-server
+### Customize port and start webpack-dev-server
+### Use the third party library, such as jquery
 
-### Next up: jquery
+### Next up: add support for images 
 
 ### Steps:
 1. Update webpack.config.js
   ```
-  devServer: {
-    host: 'localhost',
-    port: 7000,
-    open: true,
-    historyApiFallback: true,
-    watchOptions: {
-      aggregateTimeout: 300,
-      poll: 1000
-    }
-  }
+  const providerPlugin = new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: 'jquery'
+  })
   ```
-2. Start the dev server with "run start"
-3. Update JS to see the changes
-4. Update SCSS to see the changes
+  ```
+  plugins: [
+    extractPlugin,
+    providerPlugin,
+    uglifyJsPlugin
+  ],
+  ```
+2. Install jquery to the runtime dependencies
+```
+npm i jquery -S
+```
+3. Import jquery in index.js
+```
+import 'jquery';
+```
+4. Reference and use jquery in index.js
+```
+const testjQuery = () => {
+  const thisBody = $('body');
+  thisBody.css({ 'color': '#fff' })
+}
+```
+4. start dev server "npm start" to verify

@@ -6,6 +6,11 @@ const extractPlugin = new ExtractTextPlugin({
   filename: 'main.css'
 });
 
+const providerPlugin = new webpack.ProvidePlugin({
+  $: 'jquery',
+  jQuery: 'jquery'
+})
+
 const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({ })
 
 module.exports = {
@@ -68,6 +73,7 @@ module.exports = {
   },
   plugins: [
     extractPlugin,
+    providerPlugin,
     uglifyJsPlugin
   ],
   devServer: {
