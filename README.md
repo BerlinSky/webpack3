@@ -6,28 +6,24 @@
 ### Add support for eslint
 ### Add support for babel preset 2017
 ### Add JS source-map
-
 ### Next up: customize port and start webpack-dev-server
 
+### Next up: jquery
 
 ### Steps:
 1. Update webpack.config.js
   ```
- {
-    loader: 'babel-loader',
-    options: {
-      presets: ['es2015', 'es2017'],
-      plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties', 'transform-object-rest-spread']
+  devServer: {
+    host: 'localhost',
+    port: 7000,
+    open: true,
+    historyApiFallback: true,
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: 1000
     }
-  },
+  }
   ```
-2. Create a new JS file, "use-async.js" 
-3. Import and invoke the aync method in index.js
-4. Run "npm" to install babel plugins and preset
-  ```
-  npm i babel-preset-es2017 -D
-  npm i babel-plugin-transform-class-properties -D
-  npm i babel-plugin-transform-decorators-legacy -D
-  npm i babel-plugin-transform-object-rest-spread -D
-  npm i babel-plugin-transform-runtime -D
-  ``
+2. Start the dev server with "run start"
+3. Update JS to see the changes
+4. Update SCSS to see the changes
