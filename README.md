@@ -19,20 +19,11 @@
   const x = 'new Value';
   ``
 3. Run "npm start" to see an Error message for "no-unused-vars"
-4. 
-
-1. Remove the statement "import './sass/main.scss';" from index.js
-2. Add an main.scss and its path to the entry module of the webpack.config.js
+  ```
+  error  'x' is assigned a value but never used  no-unused-vars
+  ```
+4. Update the helper.js to ignore the error by adding a comment line:
 ```
-  entry: {
-    index: [
-      path.resolve(__dirname, 'app/index.js'),
-      path.resolve(__dirname, 'app/sass/main.scss')
-    ]
-  },
+// eslint-disable-next-line no-unused-vars
 ```
-3. Rename "build:prod" to "build" command in package.json
-
-
-
-
+5. Run "npm start" again to compile successfully without an error.
