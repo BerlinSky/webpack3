@@ -8,20 +8,22 @@
 ### Add JS source-map
 ### Customize port and start webpack-dev-server
 ### Use the third party library, such as jquery and Clean up the "dist" folder
+### Add support for html templating
 
 ### Next up: add support for images 
 
 ### Steps:
-1. Update webpack.config.js to use 'clean-webpack-plugin
-2. Install the clean-up plugin
+1. Update webpack.config.js to use 'html-webpack-plugin'
+2. Install the html plugin
 ```
-npm i clean-webpack-plugin -D
+npm i html-webpack-plugin -D
 ```
-3. Update "build" command in package.json
+3. Move 'index.html" from the root folder to "app" folder
+4. Remove the "publicPath from webpack.config output 
 ```
-"scripts": {
-  "start": "webpack-dev-server",
-  "build": "webpack"
+output: {
+  path: path.resolve(__dirname, 'dist'),
+  filename: 'bundle.js',
+  // publicPath: '/dist'
 },
 ```
-4. Create a build "npm run build" to verify
