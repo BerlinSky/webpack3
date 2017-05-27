@@ -9,7 +9,12 @@ const extractPlugin = new ExtractTextPlugin({
 const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({ })
 
 module.exports = {
-  entry: './app/index.js',
+  entry: {
+    index: [
+      path.resolve(__dirname, 'app/index.js'),
+      path.resolve(__dirname, 'app/sass/main.scss')
+    ]
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',

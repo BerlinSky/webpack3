@@ -1,5 +1,3 @@
-import './sass/main.scss';
-
 import { helpMe } from './helper';
 
 const siteSetup = () => {
