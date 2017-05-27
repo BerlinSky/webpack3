@@ -5,8 +5,10 @@
 ### Compile SCSS without importing it from index.js
 ### Add support for eslint
 ### Add support for babel preset 2017
+### Add JS source-map
 
-### Next up: JS source-map
+### Next up: customize port and start webpack-dev-server
+
 
 ### Steps:
 1. Update webpack.config.js
