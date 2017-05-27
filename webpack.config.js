@@ -30,6 +30,9 @@ module.exports = {
             options: {
               presets: ['es2015']
             }
+          },
+          {
+            loader: 'eslint-loader'
           }
         ]
       },
