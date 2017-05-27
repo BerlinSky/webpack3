@@ -2,33 +2,33 @@
 
 ### Use webpack-dev-server for development
 ### Use webpack.config.js
-### Preprocess SCSS 
-### Next up: SCSS with source-map
+### PGenerate source-map for SCSS 
+### Next up: ????
 
 ### Steps:
-1. Install the following 
+Update webpack.config.js to enable sourceMap for CSS loaders
   ```
-  npm i postcss-loader -D
-  ```
-2. Update webpack.config: multiple places for post-css preprocess
-  ```
-  test: /\.scss$/,
-    use: extractPlugin.extract({
-      use: ['css-loader', 'postcss-loader','sass-loader']
-    })
-  ```
-3. Create a postcss.cofig.js on the project root
+  use: [
+    { 
+      loader: "css-loader",
+      options: {
+        sourceMap: true
+      } 
+    }, 
+    { 
+      loader: "postcss-loader",
+      options: {
+        sourceMap: 'inline'
+      } 
+    }, 
+    { 
+      loader: "sass-loader", 
+      options: {
+        sourceMap: true
+      }
+    }
+  ]
 
-4. 
- Update index.html to add back the css link
   ```
-  <link rel="stylesheet" href="dist/main.css">
-  ```
-5. Update index.js to import main.scss
-  ```
-  import './sass/main.scss';
 
-  import { helpMe } from './helper';
-  ```
-6. Create scss files in new "sass" folder
 
