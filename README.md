@@ -9,21 +9,17 @@
 ### Customize port and start webpack-dev-server
 ### Use the third party library, such as jquery and Clean up the "dist" folder
 ### Add support for html templating
+### Add support for images 
 
-### Next up: add support for images 
+### Next up: add support for pug 
 
 ### Steps:
-1. Update webpack.config.js to use 'html-webpack-plugin'
-2. Install the html plugin
+1. Update webpack.config.js to use 'html-loader' and "file-loader'
+2. Install the html and file loaders
 ```
-npm i html-webpack-plugin -D
+npm i file-loader -D
+npm i html-loader -D
 ```
-3. Move 'index.html" from the root folder to "app" folder
-4. Remove the "publicPath from webpack.config output 
-```
-output: {
-  path: path.resolve(__dirname, 'dist'),
-  filename: 'bundle.js',
-  // publicPath: '/dist'
-},
-```
+3. Create an image folder
+4. Add an image to the "image" folder
+4. Restart the web-dev server to test html with image
