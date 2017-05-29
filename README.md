@@ -11,8 +11,12 @@
 ### Add support for html templating
 ### Add support for images 
 ### Add support for pug 
+### Add application favicon 
 
 ### Next up: add support for pug (option #2)
+### Next up: add support for multiple files
+### Next up: add support for production
+
 
 ### Steps:
 1. Update webpack.config.js to use 'html-loader' and "pug-html-loader'
