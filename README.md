@@ -12,6 +12,7 @@
 ### Add support for images 
 ### Add support for pug 
 ### Add application favicon 
+### Add Webpack Tree Shaking
 
 ### Next up: add support for pug (option #2)
 ### Next up: add support for multiple files
@@ -19,9 +20,8 @@
 
 
 ### Steps:
-1. Update webpack.config.js to use 'html-loader' and "pug-html-loader'
+1. Update webpack.config.js to use 'babel-preset-es2015-webpack' in place of 'es2015'
 2. Install the html-pug loaders
 ```
-npm i pug-html-loader -D
+npm i babel-preset-es2015-webpack -D
 ```
-3. Create a pug file
