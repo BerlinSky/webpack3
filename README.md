@@ -13,6 +13,7 @@
 ### Add support for pug 
 ### Add application favicon 
 ### Add Webpack Tree Shaking
+### Generate multiple ouput (html) files
 
 ### Next up: add support for pug (option #2)
 ### Next up: add support for multiple files
@@ -22,19 +23,17 @@
 ### Steps:
 1. Update webpack.config.js 
 ```
-[ 'es2015', { modules: false } ],
+  new HtmlWebpackPlugin({
+    template: 'app/index.pug',
+    filename: 'index.html',
+    chunnk: ['index']
+  }),
+  new HtmlWebpackPlugin({
+    template: 'app/service.pug',
+    filename: 'service.html',
+    chunnk: ['index']
+  }),
 ```
 
-2. Add an extra function in helper.js
-```
-export const extraOnTheTree = () => {
-  console.log('I can let it go.');
-}
-```
-3. The new function is never imported / used
+2. Add a service.pug file
 
-4. Run "npm start" to see it is being labeled as "unused" in the compiled JS file
-```
-unused harmony export extraOnTheTree
-```
-5. Rum "npm run build" to verify that the function is removed from the compiled JS file
