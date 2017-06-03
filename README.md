@@ -20,8 +20,21 @@
 
 
 ### Steps:
-1. Update webpack.config.js to use 'babel-preset-es2015-webpack' in place of 'es2015'
-2. Install the html-pug loaders
+1. Update webpack.config.js 
 ```
-npm i babel-preset-es2015-webpack -D
+[ 'es2015', { modules: false } ],
 ```
+
+2. Add an extra function in helper.js
+```
+export const extraOnTheTree = () => {
+  console.log('I can let it go.');
+}
+```
+3. The new function is never imported / used
+
+4. Run "npm start" to see it is being labeled as "unused" in the compiled JS file
+```
+unused harmony export extraOnTheTree
+```
+5. Rum "npm run build" to verify that the function is removed from the compiled JS file
