@@ -24,17 +24,18 @@
 ### Steps:
 1. Update webpack.config.js 
 ```
-  new HtmlWebpackPlugin({
-    template: 'app/index.pug',
-    filename: 'index.html',
-    chunnk: ['index']
-  }),
-  new HtmlWebpackPlugin({
-    template: 'app/service.pug',
-    filename: 'service.html',
-    chunnk: ['index']
-  }),
+  const extractPlugin = new ExtractTextPlugin({
+    filename: 'main.[chunkhash].css'
+  });
 ```
 
-2. Add a service.pug file
+2. Update webpack.config.js 
+```
+ output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.[chunkhash].js',
+    // publicPath: '/dist'
+  },
+```
+
 
