@@ -23,18 +23,10 @@ const minifyPlugin = new webpack.LoaderOptionsPlugin({
 module.exports = (env = {}) => {
   // Variables set by npm scripts in package.json
   const isProduction = env.production === true
-  const platform = env.platform // 'default' by default
-
-  const definePlugin = new webpack.DefinePlugin({
-    PRODUCTION: JSON.stringify(isProduction),
-    PLATFORM: JSON.stringify(platform)
-  })
 
   return {
-
     entry: {
       index: [
-        // path.resolve(__dirname, 'app/index.pug'),
         path.resolve(__dirname, 'app/index.js'),
         path.resolve(__dirname, 'app/sass/main.scss')
       ]
@@ -129,7 +121,6 @@ module.exports = (env = {}) => {
     },
 
     plugins: [
-      definePlugin,
       extractPlugin,
       providerPlugin,
       cleanWebPackPlugin,
@@ -158,6 +149,6 @@ module.exports = (env = {}) => {
         poll: 1000
       }
     }
-    
+
   }
 };
