@@ -22,20 +22,11 @@
 
 
 ### Steps:
-1. Update webpack.config.js 
-```
-  const extractPlugin = new ExtractTextPlugin({
-    filename: 'main.[chunkhash].css'
-  });
-```
+1. Install tslint
+2. Install tslinit-loader
+3. Install codelyzer
+4. Configure webpack.config.js
+5. Configure tslint.json
 
-2. Update webpack.config.js 
-```
- output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.[chunkhash].js',
-    // publicPath: '/dist'
-  },
-```
 
 
