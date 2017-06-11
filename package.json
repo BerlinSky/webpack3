@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-     "start": "webpack-dev-server --env.platform=web --progress",
+    "start": "webpack-dev-server --env.platform=web --progress",
     "build": "webpack -p --env.production --env.platform=default --progress"
   },
   "author": "",
@@ -28,6 +28,8 @@
     "postcss-loader": "2.0.5",
     "pug-html-loader": "1.1.4",
     "style-loader": "0.18.1",
+    "ts-loader": "2.1.0",
+    "typescript": "2.3.4",
     "webpack": "^2.5.0",
     "webpack-dev-server": "2.4.5"
   },
