@@ -24,6 +24,7 @@ const babelOptions = {
 }
 
 const entryConfig = {
+  vendor: ['jquery'],
   index: [
     path.resolve(__dirname, 'app/ts/index.ts'),
     path.resolve(__dirname, 'app/sass/main.scss')
@@ -32,7 +33,7 @@ const entryConfig = {
 
 const outputConfig = {
   path: path.resolve(__dirname, 'dist'),
-  filename: 'bundle.[chunkhash].js',
+  filename: 'bundle.[name].[chunkhash].js'
 }
 
 const jsRules = {
@@ -158,6 +159,11 @@ module.exports = (env = {}) => {
       extractPlugin,
       providerPlugin,
       cleanWebPackPlugin,
+
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'vendor',
+        filename: 'vendor.js'
+      }),
 
       new HtmlWebpackPlugin({
         favicon: 'app/favicon.png',
