@@ -3,6 +3,9 @@ import 'jquery';
 import { helpMe } from './helper';
 import { checkAsyncResult } from './use-async';
 
+// eslint-disable-next-line 
+import legachLib from 'exports-loader?legacyLib!./non-es6-lib';  
+
 const siteSetup = () => {
   console.log("Set up ... in arrow function now")
 }
@@ -17,5 +20,6 @@ $(function () {
   siteSetup();
   checkAsyncResult();
   testjQuery();
+  legachLib();
 });
 

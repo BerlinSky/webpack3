@@ -14,7 +14,7 @@
 ### Add application favicon 
 ### Add Webpack Tree Shaking
 ### Generate multiple ouput (html) files
-
+### Add support to use non-es6 modules
 
 ### Next up: add support for pug (option #2)
 ### Next up: add support for multiple files
@@ -22,11 +22,9 @@
 
 
 ### Steps:
-1. Install tslint
-2. Install tslinit-loader
-3. Install codelyzer
-4. Configure webpack.config.js
-5. Configure tslint.json
+1. Install exports-loader
+2. Update webpack to use the index.js to start
+3. Update webpack to use exports-loader
 
 
 
