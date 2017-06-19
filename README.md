@@ -22,6 +22,12 @@
 
 
 ### Steps:
+
+1. Add "fontRules" to the webpack.config
+2. Import font-awesome in main.scss
+3. Include "font-awesome" folder under "app/sass" 
+
+
 1. Install exports-loader
 2. Update webpack to use the index.js to start
 3. Update webpack to use exports-loader

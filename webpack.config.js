@@ -116,6 +116,20 @@ const pugRules = {
   ]
 }
 
+const fontRules = {
+  test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+  exclude: '/app/images/',
+  use: [
+    { 
+      loader: 'file-loader',
+      options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/'
+        } 
+    }
+  ]
+}
+
 const imageRules = {
   test: /\.(jpg|png|ico|svg)$/,
   exclude: /node_modules/,
@@ -148,7 +162,7 @@ module.exports = (env = {}) => {
     })(),
 
     module: {
-      rules: [ tsRules, jsRules, sassRules, htmlRules, pugRules, imageRules ]
+      rules: [ tsRules, jsRules, sassRules, htmlRules, pugRules, fontRules, imageRules ]
     },
 
     resolve: {
