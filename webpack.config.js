@@ -137,7 +137,7 @@ const imageRules = {
     {
       loader: 'file-loader',
       options: {
-        name: '[name],[ext]',
+        name: '[name].[ext]',
         outputPath: 'images/',
       }
     }
@@ -183,13 +183,13 @@ module.exports = (env = {}) => {
         favicon: 'app/favicon.png',
         template: 'app/index.pug',
         filename: 'index.html',
-        chunnk: ['index']
+        chunk: ['index']
       }),
       new HtmlWebpackPlugin({
         favicon: 'app/favicon.png',
         template: 'app/service.pug',
         filename: 'service.html',
-        chunnk: ['index']
+        chunk: ['index']
       }),
 
       minifyPlugin
