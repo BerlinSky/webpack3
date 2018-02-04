@@ -181,10 +181,11 @@ module.exports = (env = {}) => {
 
       new HtmlWebpackPlugin({
         favicon: 'app/favicon.png',
-        template: 'app/index.pug',
+        template: 'app/index.html',
         filename: 'index.html',
         chunk: ['index']
       }),
+
       new HtmlWebpackPlugin({
         favicon: 'app/favicon.png',
         template: 'app/service.pug',

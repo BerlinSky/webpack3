@@ -1,0 +1,255 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <title>CMS3</title>
+    <base href="/">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+    <!-- <link rel="stylesheet" href="bower_components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css" />
+    <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.min.css" />
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="bower_components/isteven-angular-multiselect/angular-multi-select.css" />
+    <link rel="stylesheet" href="bower_components/angular-bootstrap-colorpicker/css/colorpicker.css" /> -->
+
+  </head>
+
+  <body ng-app="lnmApp" class="max-height">
+
+    <div>
+      <p>Start Page</p>
+    </div>
+
+    <!-- <div ui-view class="view-frame lnm-view-frame max-height"></div> -->
+
+    <!--
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/ng-file-upload-shim/angular-file-upload-shim.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ng-file-upload/angular-file-upload.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/highcharts/highcharts.js"></script>
+    <script src="bower_components/highcharts/highcharts-more.js"></script>
+    <script src="bower_components/highcharts/modules/exporting.js"></script>
+    <script src="bower_components/highcharts-ng/dist/highcharts-ng.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/ckeditor/ckeditor.js"></script>
+    <script src="bower_components/angular-ckeditor/angular-ckeditor.js"></script>
+    <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+    <script src="bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
+    <script src="bower_components/holderjs/holder.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-ui-sortable/sortable.js"></script>
+    <script src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+    <script src="bower_components/ngGAPI/gapi.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.js"></script>
+    <script src="bower_components/isteven-angular-multiselect/angular-multi-select.js"></script>
+    <script src="bower_components/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js"></script>
+    <script src="bower_components/angular-dragdrop/src/angular-dragdrop.js"></script>
+    <script src="bower_components/js-xlsx/dist/xlsx.js"></script>
+    <script src="bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
+    <script src="bower_components/color-thief/src/color-thief.js"></script>
+
+    <script src="bower_components/ckeditor/ckeditor.js"></script>
+    <script src="bower_components/color-thief/dist/color-thief.min.js"></script>
+    <script src="bower_components/ngColorThief/angular-colorthief.min.js"></script>
+
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/factories.js"></script>
+    <script src="scripts/factories/highchart.js"></script>
+    <script src="scripts/factories/dateutility.js"></script>
+    <script src="scripts/factories/segmentfilter.js"></script>
+    <script src="scripts/factories/contentpermissions.js"></script>
+    <script src="scripts/factories/youtube.js"></script>
+    <script src="scripts/factories/vevo.js"></script>
+    <script src="scripts/factories/vimeo.js"></script>
+    <script src="scripts/factories/apimessages.js"></script>
+    <script src="scripts/factories/readcsvxls.js"></script>
+    <script src="scripts/services.js"></script>
+    <script src="scripts/resources.js"></script>
+    <script src="scripts/services/videofunctions.js"></script>
+    <script src="scripts/services/browser.js"></script>
+
+
+    <script src="scripts/directives/draggable.js"></script>
+    <script src="scripts/directives/droppable.js"></script>
+    <script src="scripts/directives/lnmsharingicons.js"></script>
+    <script src="scripts/directives/lnmtable.js"></script>
+    <script src="scripts/directives/lnmpaginator.js"></script>
+    <script src="scripts/directives/holderfix.js"></script>
+    <script src="scripts/directives/lnmpicturelist.js"></script>
+    <script src="scripts/directives/lnmtaglist.js"></script>
+    <script src="scripts/directives/lnmaccordiantform.js"></script>
+    <script src="scripts/directives/lnmpicturesequencer.js"></script>
+    <script src="scripts/directives/lnmtourmodal.js"></script>
+    <script src="scripts/directives/lnmequalizer.js"></script>
+    <script src="scripts/directives/lnmpageslide.js"></script>
+    <script src="scripts/directives/lnmimageupload.js"></script>
+    <script src="scripts/directives/lnmcsvupload.js"></script>
+    <script src="scripts/directives/lnmfunnel.js"></script>
+    <script src="scripts/directives/lnmsearch.js"></script>
+    <script src="scripts/directives/errormessages.js"></script>
+    <script src="scripts/directives/multipleemails.js"></script>
+    <script src="scripts/directives/csvlistvalueupload.js"></script>
+    <script src="scripts/directives/lnmimagelibrary/lnmimagelibrary.js"></script>
+    <script src="scripts/directives/ng-csv.js"></script>
+
+    <script src="scripts/controllers/campaign/campaign.js"></script>
+    <script src="scripts/controllers/campaign/sharedlist.js"></script>
+    <script src="scripts/controllers/campaign/customlist.js"></script>
+    <script src="scripts/controllers/campaign/campaignlist.js"></script>
+    <script src="scripts/controllers/campaign/campaignreport.js"></script>
+    <script src="scripts/controllers/campaign/campaignschedule.js"></script>
+    <script src="scripts/controllers/campaign/campaignemail.js"></script>
+		<script src="scripts/controllers/campaign/campaignlottery.js"></script>
+		<script src="scripts/controllers/campaign/campaigndashboard.js"></script>
+
+
+    <script src="scripts/controllers/fanclub/fanclubuserlist.js"></script>
+    <script src="scripts/controllers/fanclub/fanclubuserimport.js"></script>
+
+    <script src="scripts/controllers/emaillist/emaillist.js"></script>
+
+    <script src="scripts/controllers/home/home.js"></script>
+    <script src="scripts/controllers/login/login.js"></script>
+
+    <script src="scripts/controllers/error404.js"></script>
+    <script src="scripts/controllers/error403.js"></script>
+    <script src="scripts/controllers/news/newslist.js"></script>
+
+    <script src="scripts/controllers/contents/modal.js"></script>
+    <script src="scripts/controllers/contents/static.js"></script>
+    <script src="scripts/controllers/contents/notification.js"></script>
+    <script src="scripts/controllers/contents/message.js"></script>
+    <script src="scripts/controllers/contents/contents.js"></script>
+
+    <script src="scripts/controllers/comment/comment.js"></script>
+
+    <script src="scripts/controllers/tour/tour.js"></script>
+    <script src="scripts/controllers/tour/tourinfo.js"></script>
+    <script src="scripts/controllers/tour/tourdate.js"></script>
+    <script src="scripts/controllers/tour/venue.js"></script>
+
+    <script src="scripts/controllers/discography/discography.js"></script>
+    <script src="scripts/controllers/discography/album.js"></script>
+    <script src="scripts/controllers/discography/track.js"></script>
+    <script src="scripts/controllers/discography/lyrics.js"></script>
+
+    <script src="scripts/controllers/admin/admin.js"></script>
+    <script src="scripts/controllers/admin/website.js"></script>
+    <script src="scripts/controllers/admin/feature.js"></script>
+    <script src="scripts/controllers/admin/user.js"></script>
+
+
+    <script src="scripts/controllers/setting/setting.js"></script>
+    <script src="scripts/controllers/setting/email.js"></script>
+    <script src="scripts/controllers/setting/newstag.js"></script>
+    <script src="scripts/controllers/setting/socialmedia.js"></script>
+    <script src="scripts/controllers/setting/notificationclass.js"></script>
+    <script src="scripts/controllers/setting/modalclass.js"></script>
+    <script src="scripts/controllers/setting/faq.js"></script>
+    <script src="scripts/controllers/setting/faqcategory.js"></script>
+    <script src="scripts/controllers/setting/helptopic.js"></script>
+    <script src="scripts/controllers/setting/memcache.js"></script>
+
+
+    <script src="scripts/controllers/eventmanager/eventsite.js"></script>
+    <script src="scripts/controllers/eventmanager/eventvenue.js"></script>
+    <script src="scripts/controllers/eventmanager/events.js"></script>
+    <script src="scripts/controllers/eventmanager/eventcontents.js"></script>
+    <script src="scripts/controllers/eventmanager/eventstyle.js"></script>
+    <script src="scripts/controllers/eventmanager/eventcustomstyle.js"></script>
+    <script src="scripts/controllers/eventmanager/eventphoto.js"></script>
+
+
+    <script src="scripts/controllers/media/media.js"></script>
+    <script src="scripts/controllers/media/photos.js"></script>
+    <script src="scripts/controllers/media/photogalleries.js"></script>
+    <script src="scripts/controllers/media/video.js"></script>
+    <script src="scripts/controllers/media/videogalleries.js"></script>
+
+
+    <script src="scripts/controllers/dashboard/dashboard.js"></script>
+    <script src="scripts/controllers/navigation.js"></script>
+    <script src="scripts/controllers/modalInstanceController.js"></script>
+
+    <script src="scripts/controllers/media/photogalleryrecord.js"></script>
+    <script src="scripts/controllers/media/videogalleriesrecord.js"></script>
+
+    <script src="scripts/services/lnmgapi.js"></script>
+    <script src="scripts/services/searchconfig.js"></script>
+
+
+    <script src="scripts/factories/currenDesignPageService.js"></script>
+    <script src="scripts/controllers/venuesite/siteStylerController.js"></script>
+    <script src="scripts/controllers/venuesite/designerPreviewController.js"></script>
+    <script src="scripts/controllers/venuesite/designerEditController.js"></script>
+    <script src="scripts/controllers/venuesite/ModalInstanceCancelCtrl.js"></script>
+    <script src="scripts/controllers/venuesite/ModalInstanceResetCtrl.js"></script>
+    <script src="scripts/controllers/venuesite/ModalInstanceBackCtrl.js"></script>
+
+    <script src="scripts/directives/designer-active-region.directive.js"></script>
+    <script src="scripts/directives/designer-active-menu.directive.js"></script>
+    <script src="scripts/directives/styler-iframe-refresher.directive.js"></script>
+
+    <script src="scripts/directives/styler-edit.directive.js"></script>
+    <script src="scripts/directives/styler-preview.directive.js"></script>
+    <script src="scripts/directives/styler-event-home.directive.js"></script>
+    <script src="scripts/directives/styler-event-list.directive.js"></script>
+    <script src="scripts/directives/styler-event-calendar.directive.js"></script>
+    <script src="scripts/directives/styler-event-detail.directive.js"></script>
+
+    <script src="scripts/components/ckeditor/eventbuttons.js"></script>
+    <script src="scripts/components/ckeditor/publicasterSnippets.js"></script>
+    <script type="text/javascript" src="scripts/components/bootstrap-tag-cloud-master/bootstrap-tag-cloud.js"></script>
+    <script type="text/javascript" src="scripts/components/FileSaver/FileSaver.min.js"></script>
+    <script src="scripts/controllers/pedp/pedp.js"></script>
+    <script src="scripts/controllers/pedp/pedpevents.js"></script>
+
+    -->
+
+    <!-- This <script> tag is used to override the ng-tags-input directive's template to change the autocomplete -->
+    <!-- dropdown list to be a tag cloud per Jira issue AWD-354 -->
+
+    <!--
+    <script id="ngTagsInput/auto-complete.html" type="text/ng-template">
+      <div class="autocomplete" ng-show="suggestionList.visible">
+        <ul class="suggestion-list tag-cloud">
+          <li class="suggestion-item tag-cloud"
+              ng-repeat="item in suggestionList.items track by track(item)"
+              ng-class="{selected: item == suggestionList.selected}"
+              ng-click="addSuggestion()"
+              ng-mouseenter="suggestionList.select($index)"
+              ng-bind-html="highlight(item)">
+          </li>
+        </ul>
+      </div>
+    </script>
+    -->
+
+  </body>
+</html>
