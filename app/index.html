@@ -14,10 +14,15 @@
 
   </head>
 
-  <body ng-app="lnmApp" class="max-height">
+  <!-- <body ng-app="lnmApp" class="max-height"> -->
+  <body ng-app="myApp" class="max-height" style="background-color: tomato;">
 
     <div>
-      <p>Start Page</p>
+
+      <p>Information:</p>
+      <p>Name : <input type="text" ng-model="name" placeholder="Information"></p>
+      <h1>Hello {{name}}</h1>
+
     </div>
 
     <!-- <div ui-view class="view-frame lnm-view-frame max-height"></div> -->
