@@ -75,20 +75,20 @@ const sassRules = {
   exclude: /node_modules/,
   use: extractPlugin.extract({
     use: [
-      { 
+      {
         loader: "css-loader",
         options: {
           sourceMap: true
-        } 
-      }, 
-      { 
+        }
+      },
+      {
         loader: "postcss-loader",
         options: {
           sourceMap: 'inline'
-        } 
-      }, 
-      { 
-        loader: "sass-loader", 
+        }
+      },
+      {
+        loader: "sass-loader",
         options: {
           sourceMap: true
         }
@@ -107,7 +107,7 @@ const pugRules = {
   test: /\.pug$/,
   exclude: /node_modules/,
   use: [
-    { loader: 'html-loader' }, 
+    { loader: 'html-loader' },
     { loader: 'pug-html-loader',
       options: {
         name: '[name],[ext]'
@@ -120,12 +120,12 @@ const fontRules = {
   test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
   exclude: '/app/images/',
   use: [
-    { 
+    {
       loader: 'file-loader',
       options: {
           name: '[name].[ext]',
           outputPath: 'fonts/'
-        } 
+        }
     }
   ]
 }
