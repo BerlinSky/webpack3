@@ -1,5 +1,5 @@
 {
-  "name": "webpack2",
+  "name": "webpack3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -38,8 +38,8 @@
     "tslint": "5.4.3",
     "tslint-loader": "3.5.3",
     "typescript": "2.3.4",
-    "webpack": "^2.5.0",
-    "webpack-dev-server": "2.4.5"
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.11.1"
   },
   "dependencies": {
     "jquery": "3.2.1"
